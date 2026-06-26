@@ -35,6 +35,20 @@ mean_l2_drift_mean: 138.2900505065918
 quality_score_proxy_mean: 0.727326073641731
 ```
 
+## Inference / edge relevance
+
+The result is relevant because action-horizon and control-frequency assumptions are runtime issues, not only model-quality issues.
+
+In edge robotics or VLA deployment, the model may be correct in isolation but still fail when:
+
+* observations arrive late
+* inference runs slower than expected
+* action chunks are reused for too long
+* the policy assumes a different control horizon than the runtime
+* visual inputs are degraded before reaching the policy
+
+RoboTrace evaluates these issues using offline traces and lightweight simulations.
+
 ## Action trace metrics
 
 | Metric                        |      Value |
@@ -76,7 +90,7 @@ Tested failure modes:
 * action chunk reuse
 * reduced inference frequency
 * temporal jitter
-* action horizon mismatch
+* action-horizon mismatch
 
 Top failure mode:
 
@@ -112,6 +126,6 @@ artifacts/figures/
 
 ## Interpretation
 
-RoboTrace is strongest as a research-engineering artifact: it shows a reproducible way to evaluate trace robustness and deployment-stress behavior under free/low-cost compute constraints.
+RoboTrace is strongest as a research-engineering artifact for low-cost robotics/VLA deployment evaluation.
 
-It is not a real robot benchmark or full VLA policy evaluation.
+It should not be presented as a real robot benchmark, real VLA policy benchmark, or measured edge-latency benchmark.

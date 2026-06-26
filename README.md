@@ -1,46 +1,49 @@
 # RoboTrace
 
-**RoboTrace is a Kaggle-friendly robustness and deployment-stress evaluation toolkit for VLA-style robot-learning traces.**
+**Low-cost deployment-stress evaluation for robot-learning and VLA-style inference pipelines.**
 
-It evaluates how recorded robot-learning traces behave under practical failure modes: action instability, visual degradation, symbolic instruction perturbations, temporal jitter, stale observations, frame skipping, reduced inference/control frequency, action chunk reuse, and action-horizon mismatch.
+RoboTrace is a research-engineering toolkit for testing how recorded robot-learning traces behave under practical deployment failures: stale observations, frame skipping, reduced inference frequency, temporal jitter, action chunk reuse, visual degradation, symbolic instruction perturbations, and action-horizon mismatch.
 
-The first public release runs on `lerobot/pusht` and produces an evidence bundle with metrics, plots, reports, failure analysis, Hugging Face dataset artifacts, and a dashboard.
+It is designed for constrained environments such as Kaggle/Colab, where robot hardware, paid APIs, and heavy VLA policy execution may not be available.
 
 ---
 
 ## Problem
 
-Vision-Language-Action and robot-learning systems are usually evaluated through policy performance or hardware trials. Those are expensive, fragile, and often impossible on free compute.
+Robot and VLA systems are usually discussed through model quality or task success. In deployment, many failures also come from the inference/control pipeline itself:
 
-RoboTrace focuses on an earlier systems question:
+* observations arrive late
+* frames are skipped
+* stale observations are reused
+* control loops run slower than expected
+* action chunks are reused incorrectly
+* action horizons mismatch between policy assumptions and runtime execution
+* visual input quality degrades
+* task/instruction representations become noisy or incomplete
 
-> Before loading a heavy VLA policy or running hardware, can we stress-test recorded robot-learning traces for deployment-style failures?
-
-This matters because real embodied-AI deployments often fail due to timing, control-loop assumptions, observation delays, action-horizon mismatch, and data robustness issues, not only model accuracy.
+RoboTrace studies these failure modes using saved robot-learning traces before expensive hardware or full-policy evaluation.
 
 ---
 
 ## Objective
 
-RoboTrace aims to provide a low-cost evaluation scaffold that works even when:
+RoboTrace asks:
 
-* no robot hardware is available
-* no paid API is available
-* LeRobot/policy loading fails
-* only Kaggle/Colab-style compute is available
-* the user needs reproducible evidence, not just a demo notebook
+> Can we stress-test recorded robot-learning traces for edge/deployment-style inference failures before running a heavy VLA policy or robot hardware?
+
+The goal is to produce reproducible engineering evidence under low-cost compute constraints.
 
 ---
 
 ## Current release
 
-Dataset:
+The first release evaluates:
 
 ```text
 lerobot/pusht
 ```
 
-Current run summary:
+Run summary:
 
 | Item                     | Value |
 | ------------------------ | ----: |
@@ -58,9 +61,13 @@ Current run summary:
 
 ## Main finding
 
-The strongest result from the current run is that **action-horizon mismatch** produced the highest deployment-stress risk.
+The strongest deployment-stress failure mode in this run was:
 
-Highest-risk async scenario:
+```text
+action_horizon_mismatch
+```
+
+Highest-risk scenario:
 
 ```text
 mode: action_horizon_mismatch
@@ -69,22 +76,44 @@ risk_score_proxy: 2.5562635495893855
 mean_l2_drift_mean: 138.2900505065918
 ```
 
-This suggests that action/control-horizon assumptions can strongly distort robot-learning traces even before policy deployment or hardware execution.
+This suggests that action/control-horizon assumptions can significantly distort recorded robot-learning traces even before a learned policy is deployed on hardware.
+
+---
+
+## Why this is relevant to inference and edge AI
+
+RoboTrace is useful for evaluating failure modes around the **runtime layer** of embodied AI systems:
+
+* edge inference frequency constraints
+* control-loop degradation
+* stale observation handling
+* action chunk scheduling
+* trace stability under delayed inputs
+* deployment-time robustness before hardware testing
+* lightweight evaluation when full VLA execution is unavailable
+
+This makes the project relevant to:
+
+* VLA / embodied AI evaluation
+* robotics inference systems
+* edge AI deployment
+* multimodal AI robustness
+* low-cost AI systems research
+* reproducible research-engineering workflows
 
 ---
 
 ## What RoboTrace evaluates
 
-### 1. Action trace metrics
+### Action trace stability
 
-* action smoothness
 * L1/L2 step deltas
+* action smoothness
 * trajectory drift
 * action magnitude distribution
-* timestamp gaps
-* episode-level summaries
+* timestamp gap statistics
 
-### 2. Visual perturbation severity
+### Visual robustness severity
 
 * brightness
 * contrast
@@ -94,14 +123,14 @@ This suggests that action/control-horizon assumptions can strongly distort robot
 * center crop
 * resolution drop
 
-### 3. Instruction sensitivity artifacts
+### Instruction sensitivity artifacts
 
 * symbolic masking
 * symbolic distractors
 * symbolic ambiguity
 * fallback handling when natural-language instructions are absent
 
-### 4. Async deployment-stress simulation
+### Async deployment-stress simulation
 
 * frame skipping
 * observation delay
@@ -109,15 +138,15 @@ This suggests that action/control-horizon assumptions can strongly distort robot
 * action chunk reuse
 * reduced inference frequency
 * temporal jitter
-* action horizon mismatch
+* action-horizon mismatch
 
-### 5. Lightweight baselines
+### Lightweight baselines
 
-* replay/oracle baseline
+* replay/oracle
 * first-action hold
-* mean-action baseline
-* lagged-action baseline
-* chunked-action replay
+* mean action
+* lagged action
+* chunked replay
 * linear extrapolation
 
 ---
@@ -137,6 +166,7 @@ results/summaries/robotrace_final_summary.json
 results/summaries/robotrace_evidence_index.csv
 results/figures/
 reports/
+artifacts/
 ```
 
 ---
@@ -153,7 +183,7 @@ RoboTrace/
 │   ├── summaries/         # CSV/JSON metrics
 │   └── figures/           # Plots
 ├── artifacts/             # Public evidence bundle
-├── hf_release/            # HF release assets
+├── hf_release/            # Hugging Face release assets
 └── case_studies/          # Stage outputs
 ```
 
@@ -201,28 +231,6 @@ RoboTrace does **not** claim:
 The current release is an offline trace-level and simulation-level evaluation scaffold.
 
 ---
-
-## Roadmap
-
-* add more LeRobot-style datasets
-* add isolated real-policy adapters
-* add nearest-neighbor visual-action baseline
-* add tiny behavior-cloning baseline
-* compare async stress sensitivity across datasets
-* export paper-style tables
-
----
-
-## Citation
-
-```bibtex
-@software{robotrace2026,
-  title = {RoboTrace: Low-Cost Robustness and Deployment-Stress Evaluation for VLA-Style Robot-Learning Traces},
-  author = {Shaurya Omar},
-  year = {2026},
-  url = {https://github.com/githubshaurya/RoboTrace}
-}
-```
 
 ## License
 
