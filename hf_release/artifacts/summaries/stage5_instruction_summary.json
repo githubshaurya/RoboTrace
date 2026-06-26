@@ -1,0 +1,37 @@
+{
+  "stage": "stage_5_instruction_sensitivity",
+  "timestamp_utc": "2026-06-26T06:54:54.129413+00:00",
+  "dataset": "lerobot/pusht",
+  "split": "train",
+  "num_raw_instruction_records": 512,
+  "num_unique_instruction_records": 1,
+  "num_natural_language_unique": 0,
+  "num_symbolic_unique": 1,
+  "num_perturbation_rows": 4,
+  "policy_loaded": false,
+  "policy_drift_measured": false,
+  "language_robustness_claim_allowed": false,
+  "language_robustness_claim_warning": "No natural-language instructions detected. Do not claim language instruction robustness for this dataset.",
+  "instruction_source_type_counts": {
+    "numeric_task_id": 1
+  },
+  "perturbation_counts": {
+    "original": 1,
+    "symbolic_mask": 1,
+    "symbolic_ambiguous": 1,
+    "symbolic_distractor": 1
+  },
+  "load_status": {
+    "repo_id": "lerobot/pusht",
+    "split": "train",
+    "streaming": true,
+    "max_rows_scan": 512,
+    "ok": true,
+    "error": null,
+    "num_records": 512
+  },
+  "warnings": [
+    "No natural-language instructions detected. Stage 5 will generate symbolic-task perturbation artifacts only. Do not claim language-instruction robustness for this dataset."
+  ],
+  "errors": []
+}

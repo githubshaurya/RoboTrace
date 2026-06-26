@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robotrace"
+version = "0.1.0"
+description = "Kaggle-friendly robustness and deployment-stress evaluation toolkit for VLA and robot-learning traces."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Shaurya Omar"}]
+dependencies = ["numpy", "pandas"]
+
+[project.optional-dependencies]
+viz = ["matplotlib"]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["robotrace*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

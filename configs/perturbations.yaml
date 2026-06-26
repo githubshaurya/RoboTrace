@@ -1,0 +1,15 @@
+visual:
+  brightness: [0.2, 0.5]
+  contrast: [0.2, 0.5]
+  blur: [1, 2]
+  jpeg: [30, 60]
+  random_occlusion: [0.1, 0.2]
+  center_crop: [0.75, 0.9]
+  resolution_drop: [0.25, 0.5]
+
+instruction:
+  shortened: true
+  object_masking: true
+  simple_synonyms: true
+  distractor_phrase: true
+  ambiguous_wording: true

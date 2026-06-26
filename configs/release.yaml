@@ -1,0 +1,10 @@
+huggingface:
+  dataset_repo: githubshaurya/robotrace-vla-robustness-traces
+  space_repo: githubshaurya/robotrace-vla-dashboard
+
+github:
+  repo: githubshaurya/RoboTrace
+
+safety:
+  never_print_tokens: true
+  no_paid_apis: true

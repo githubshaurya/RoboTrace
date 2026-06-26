@@ -1,0 +1,450 @@
+[
+  {
+    "stage": "stage0_env_probe",
+    "label": "env_probe_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/env_probe/env_probe.json",
+    "exists": true,
+    "size_bytes": 2543
+  },
+  {
+    "stage": "stage0_env_probe",
+    "label": "nvidia_smi_txt",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/env_probe/nvidia_smi.txt",
+    "exists": true,
+    "size_bytes": 2159
+  },
+  {
+    "stage": "stage0_env_probe",
+    "label": "pip_freeze_txt",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/env_probe/pip_freeze.txt",
+    "exists": true,
+    "size_bytes": 18641
+  },
+  {
+    "stage": "stage2_dataset_probe",
+    "label": "dataset_probe_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/case_studies/dataset_probe/dataset_probe.json",
+    "exists": true,
+    "size_bytes": 53109
+  },
+  {
+    "stage": "stage2_dataset_probe",
+    "label": "dataset_schema_md",
+    "kind": "report",
+    "path": "/kaggle/working/RoboTrace/case_studies/dataset_probe/dataset_schema.md",
+    "exists": true,
+    "size_bytes": 5539
+  },
+  {
+    "stage": "stage2_dataset_probe",
+    "label": "dataset_sample_jsonl",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage2_dataset_sample_rows.jsonl",
+    "exists": true,
+    "size_bytes": 22507
+  },
+  {
+    "stage": "stage2_dataset_probe",
+    "label": "episode_summary_csv",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/stage2_episode_probe_summary.csv",
+    "exists": true,
+    "size_bytes": 95
+  },
+  {
+    "stage": "stage3_trace_metrics",
+    "label": "episode_metrics_jsonl",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage3_episode_metrics.jsonl",
+    "exists": true,
+    "size_bytes": 9485
+  },
+  {
+    "stage": "stage3_trace_metrics",
+    "label": "step_metrics_jsonl",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage3_step_metrics.jsonl",
+    "exists": true,
+    "size_bytes": 176913
+  },
+  {
+    "stage": "stage3_trace_metrics",
+    "label": "episode_traces_npz",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage3_episode_traces.npz",
+    "exists": true,
+    "size_bytes": 4812
+  },
+  {
+    "stage": "stage3_trace_metrics",
+    "label": "episode_summary_csv",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/stage3_episode_summary.csv",
+    "exists": true,
+    "size_bytes": 4628
+  },
+  {
+    "stage": "stage3_trace_metrics",
+    "label": "dataset_summary_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/stage3_dataset_summary.json",
+    "exists": true,
+    "size_bytes": 8247
+  },
+  {
+    "stage": "stage3_trace_metrics",
+    "label": "trace_report_md",
+    "kind": "report",
+    "path": "/kaggle/working/RoboTrace/case_studies/trace_metrics/stage3_trace_metrics_report.md",
+    "exists": true,
+    "size_bytes": 5389
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "manifest_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage4_visual_perturbation_manifest.json",
+    "exists": true,
+    "size_bytes": 2220
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "visual_metrics_jsonl",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage4_visual_metrics.jsonl",
+    "exists": true,
+    "size_bytes": 140878
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "visual_summary_csv",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/stage4_visual_summary.csv",
+    "exists": true,
+    "size_bytes": 2061
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "visual_summary_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/stage4_visual_summary.json",
+    "exists": true,
+    "size_bytes": 5845
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "visual_report_md",
+    "kind": "report",
+    "path": "/kaggle/working/RoboTrace/case_studies/visual_robustness/stage4_visual_robustness_report.md",
+    "exists": true,
+    "size_bytes": 5893
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "stage4_summary_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/case_studies/visual_robustness/stage4_summary.json",
+    "exists": true,
+    "size_bytes": 1607
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "repo_visual_candidates_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/case_studies/visual_robustness/stage4_repo_visual_file_candidates.json",
+    "exists": true,
+    "size_bytes": 231
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "frame_manifest_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/case_studies/visual_robustness/stage4_extracted_frame_manifest.json",
+    "exists": true,
+    "size_bytes": 6604
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "preview_grid",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage4_visual_preview_grid.png",
+    "exists": true,
+    "size_bytes": 78732
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "severity_bar",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage4_visual_severity_bar.png",
+    "exists": true,
+    "size_bytes": 67464
+  },
+  {
+    "stage": "stage4_visual_robustness",
+    "label": "severity_heatmap",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage4_visual_severity_heatmap.png",
+    "exists": true,
+    "size_bytes": 93889
+  },
+  {
+    "stage": "stage5_instruction_sensitivity",
+    "label": "instruction_records_jsonl",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage5_instruction_records.jsonl",
+    "exists": true,
+    "size_bytes": 309
+  },
+  {
+    "stage": "stage5_instruction_sensitivity",
+    "label": "instruction_perturbations_jsonl",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage5_instruction_perturbations.jsonl",
+    "exists": true,
+    "size_bytes": 2972
+  },
+  {
+    "stage": "stage5_instruction_sensitivity",
+    "label": "instruction_manifest_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage5_instruction_manifest.json",
+    "exists": true,
+    "size_bytes": 698
+  },
+  {
+    "stage": "stage5_instruction_sensitivity",
+    "label": "instruction_summary_csv",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/stage5_instruction_summary.csv",
+    "exists": true,
+    "size_bytes": 321
+  },
+  {
+    "stage": "stage5_instruction_sensitivity",
+    "label": "instruction_summary_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/stage5_instruction_summary.json",
+    "exists": true,
+    "size_bytes": 1178
+  },
+  {
+    "stage": "stage5_instruction_sensitivity",
+    "label": "instruction_report_md",
+    "kind": "report",
+    "path": "/kaggle/working/RoboTrace/case_studies/instruction_sensitivity/stage5_instruction_sensitivity_report.md",
+    "exists": true,
+    "size_bytes": 4615
+  },
+  {
+    "stage": "stage5_instruction_sensitivity",
+    "label": "stage5_summary_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/case_studies/instruction_sensitivity/stage5_summary.json",
+    "exists": true,
+    "size_bytes": 1712
+  },
+  {
+    "stage": "stage5_instruction_sensitivity",
+    "label": "perturbation_counts",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage5_instruction_perturbation_counts.png",
+    "exists": true,
+    "size_bytes": 49974
+  },
+  {
+    "stage": "stage5_instruction_sensitivity",
+    "label": "length_shift",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage5_instruction_length_shift.png",
+    "exists": true,
+    "size_bytes": 54510
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "async_raw_jsonl",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/async_raw.jsonl",
+    "exists": true,
+    "size_bytes": 148902
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "async_candidate_traces_npz",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage6_async_candidate_traces.npz",
+    "exists": true,
+    "size_bytes": 46249
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "async_summary_csv",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/async_summary.csv",
+    "exists": true,
+    "size_bytes": 7697
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "async_dataset_summary_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/async_dataset_summary.json",
+    "exists": true,
+    "size_bytes": 13355
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "async_report_md",
+    "kind": "report",
+    "path": "/kaggle/working/RoboTrace/case_studies/async_simulation/async_report.md",
+    "exists": true,
+    "size_bytes": 10851
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "stage6_summary_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/case_studies/async_simulation/stage6_summary.json",
+    "exists": true,
+    "size_bytes": 3133
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "drift_by_mode",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage6_async_drift_by_mode.png",
+    "exists": true,
+    "size_bytes": 82535
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "smoothness_by_mode",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage6_async_smoothness_degradation_by_mode.png",
+    "exists": true,
+    "size_bytes": 83525
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "latency_quality",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage6_latency_quality_tradeoff.png",
+    "exists": true,
+    "size_bytes": 68864
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "trace_overlay",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage6_trace_overlay_first_episode.png",
+    "exists": true,
+    "size_bytes": 151089
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "metric_heatmap",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage6_async_metric_heatmap.png",
+    "exists": true,
+    "size_bytes": 113837
+  },
+  {
+    "stage": "stage6_async_simulation",
+    "label": "recovery_delay",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage6_recovery_delay_proxy.png",
+    "exists": true,
+    "size_bytes": 85327
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "baseline_raw_jsonl",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage7_baseline_eval_raw.jsonl",
+    "exists": true,
+    "size_bytes": 33796
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "baseline_rollouts_npz",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/raw/stage7_baseline_rollouts.npz",
+    "exists": true,
+    "size_bytes": 18042
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "baseline_summary_csv",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/stage7_baseline_summary.csv",
+    "exists": true,
+    "size_bytes": 1715
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "policy_eval_summary_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/results/summaries/stage7_policy_eval_summary.json",
+    "exists": true,
+    "size_bytes": 5920
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "policy_eval_report_md",
+    "kind": "report",
+    "path": "/kaggle/working/RoboTrace/case_studies/optional_policy_eval/stage7_policy_eval_report.md",
+    "exists": true,
+    "size_bytes": 5417
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "stage7_summary_json",
+    "kind": "saved_file",
+    "path": "/kaggle/working/RoboTrace/case_studies/optional_policy_eval/stage7_summary.json",
+    "exists": true,
+    "size_bytes": 2633
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "baseline_drift",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage7_baseline_mean_drift.png",
+    "exists": true,
+    "size_bytes": 70520
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "baseline_quality",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage7_baseline_quality_score.png",
+    "exists": true,
+    "size_bytes": 72246
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "trace_overlay",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage7_baseline_trace_overlay.png",
+    "exists": true,
+    "size_bytes": 133867
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "baseline_heatmap",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage7_baseline_metric_heatmap.png",
+    "exists": true,
+    "size_bytes": 105945
+  },
+  {
+    "stage": "stage7_optional_policy_eval",
+    "label": "baseline_recovery",
+    "kind": "figure",
+    "path": "/kaggle/working/RoboTrace/results/figures/stage7_baseline_recovery_delay.png",
+    "exists": true,
+    "size_bytes": 75824
+  }
+]

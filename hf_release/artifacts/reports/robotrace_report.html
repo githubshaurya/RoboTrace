@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RoboTrace Report</title>
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.5; max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+pre { background: #f6f6f6; padding: 10px; overflow-x: auto; }
+code { background: #f3f3f3; padding: 2px 4px; }
+h1, h2, h3 { color: #222; }
+</style>
+</head>
+<body>
+<h1>RoboTrace: Low-Cost Robustness and Deployment-Stress Evaluation for VLA-Style Robot Learning</h1>
+
+<ul>
+<li>Generated UTC: `2026-06-26T06:55:41.614182+00:00`</li>
+<li>Root: `/kaggle/working/RoboTrace`</li>
+<li>Dataset: `lerobot/pusht`</li>
+<li>Split: `train`</li>
+</ul>
+
+<h2>Executive summary</h2>
+
+<p>RoboTrace is a Kaggle-friendly evaluation toolkit for low-cost Vision-Language-Action and robot-learning traces. It focuses on robustness and deployment-stress evidence rather than pretending a notebook is a robot lab.</p>
+
+<p>The completed run evaluated `lerobot/pusht` through dataset probing, action trace metrics, visual perturbation severity, symbolic instruction sensitivity, async deployment-stress simulation, and lightweight action-only baselines.</p>
+
+<p>The strongest result is from Stage 6: **action horizon mismatch** was the highest-risk deployment failure mode in this run. This gives the project a real systems story: control-loop and action-horizon mismatches can strongly distort recorded robot action traces even before a learned policy or hardware deployment is involved.</p>
+
+<h2>Completed stages</h2>
+
+<pre>| stage                          | status   |   warnings |   errors |</pre>
+<pre>|:-------------------------------|:---------|-----------:|---------:|</pre>
+<pre>| stage0_env_probe               | PASS     |          0 |        0 |</pre>
+<pre>| stage1_core                    | present  |          0 |        0 |</pre>
+<pre>| stage2_dataset_probe           | PASS     |          0 |        0 |</pre>
+<pre>| stage3_trace_metrics           | PASS     |          0 |        0 |</pre>
+<pre>| stage4_visual_robustness       | PASS     |          0 |        0 |</pre>
+<pre>| stage5_instruction_sensitivity | PASS     |          1 |        0 |</pre>
+<pre>| stage6_async_simulation        | PASS     |          0 |        0 |</pre>
+<pre>| stage7_optional_policy_eval    | PASS     |          0 |        0 |</pre>
+
+<h2>Key metrics</h2>
+
+<pre>| stage                          | metric                             | value                                        | interpretation                               |</pre>
+<pre>|:-------------------------------|:-----------------------------------|:---------------------------------------------|:---------------------------------------------|</pre>
+<pre>| stage0_env_probe               | overall_status                     | PASS                                         | Kaggle environment probe status              |</pre>
+<pre>| stage0_env_probe               | python                             |                                              | Python runtime                               |</pre>
+<pre>| stage0_env_probe               | cuda_available                     |                                              | CUDA availability                            |</pre>
+<pre>| stage1_core                    | tests_ok                           | True                                         | Core unit tests                              |</pre>
+<pre>| stage1_core                    | num_project_files                  | 46                                           | Created/indexed project files                |</pre>
+<pre>| stage2_dataset_probe           | selected_dataset                   | lerobot/pusht                                | Dataset selected for staged probe            |</pre>
+<pre>| stage2_dataset_probe           | dataset_status                     | loaded                                       | Dataset loading status                       |</pre>
+<pre>| stage2_dataset_probe           | num_sample_rows_loaded             | 80                                           | Rows sampled for schema probe                |</pre>
+<pre>| stage2_dataset_probe           | num_episode_groups                 | 1                                            | Episode groups observed                      |</pre>
+<pre>| stage3_trace_metrics           | num_usable_episodes                | 4                                            | Episodes with usable action traces           |</pre>
+<pre>| stage3_trace_metrics           | num_step_metric_rows               | 512                                          | Per-step metric rows                         |</pre>
+<pre>| stage3_trace_metrics           | smoothness_mean_l2_step_delta_mean | 8.219304659792309                            | Dataset-level action trace metric            |</pre>
+<pre>| stage3_trace_metrics           | trajectory_drift_l2_mean           | 181.0955104827881                            | Dataset-level action trace metric            |</pre>
+<pre>| stage3_trace_metrics           | action_magnitude_l2_mean_mean      | 368.27360229314803                           | Dataset-level action trace metric            |</pre>
+<pre>| stage3_trace_metrics           | num_steps_mean                     | 128.0                                        | Dataset-level action trace metric            |</pre>
+<pre>| stage4_visual_robustness       | num_images                         | 12                                           | Real frames sampled for visual perturbations |</pre>
+<pre>| stage4_visual_robustness       | image_source                       | hf_repo_video_file                           | Visual frame source                          |</pre>
+<pre>| stage4_visual_robustness       | num_metric_rows                    | 144                                          | Visual perturbation metric rows              |</pre>
+<pre>| stage4_visual_robustness       | policy_drift_measured              | False                                        | Policy drift intentionally not measured      |</pre>
+<pre>| stage5_instruction_sensitivity | num_raw_instruction_records        | 512                                          | Instruction-like raw records                 |</pre>
+<pre>| stage5_instruction_sensitivity | num_natural_language_unique        | 0                                            | Natural-language instruction count           |</pre>
+<pre>| stage5_instruction_sensitivity | symbolic_fallback_used             | True                                         | Whether symbolic task fallback was used      |</pre>
+<pre>| stage5_instruction_sensitivity | num_perturbation_rows              | 4                                            | Instruction perturbation rows                |</pre>
+<pre>| stage6_async_simulation        | num_episodes                       | 4                                            | Episodes used in async simulator             |</pre>
+<pre>| stage6_async_simulation        | num_scenarios                      | 26                                           | Async scenario count                         |</pre>
+<pre>| stage6_async_simulation        | num_raw_rows                       | 104                                          | Raw async simulation rows                    |</pre>
+<pre>| stage6_async_simulation        | top_mode_by_drift                  | action_horizon_mismatch                      | Worst async mode by normalized drift         |</pre>
+<pre>| stage6_async_simulation        | top_mode_normalized_mean_l2_drift  | 0.3330325318685965                           | Normalized drift for worst mode              |</pre>
+<pre>| stage6_async_simulation        | top_risk_scenario_mode             | action_horizon_mismatch                      | Highest-risk async scenario                  |</pre>
+<pre>| stage6_async_simulation        | top_risk_scenario_params           | {&quot;actual_horizon&quot;: 8, &quot;expected_horizon&quot;: 4} | Highest-risk async scenario params           |</pre>
+<pre>| stage6_async_simulation        | top_risk_scenario_mean_l2_drift    | 138.2900505065918                            | Highest-risk mean action drift               |</pre>
+<pre>| stage7_optional_policy_eval    | num_baselines                      | 8                                            | Baseline count                               |</pre>
+<pre>| stage7_optional_policy_eval    | num_eval_rows                      | 32                                           | Baseline evaluation rows                     |</pre>
+<pre>| stage7_optional_policy_eval    | real_policy_loaded                 | False                                        | Real policy status                           |</pre>
+<pre>| stage7_optional_policy_eval    | top_baseline_by_quality            | replay_oracle                                | Best baseline by quality proxy               |</pre>
+<pre>| stage7_optional_policy_eval    | top_baseline_quality_score         | 1.0                                          | Best baseline quality proxy                  |</pre>
+<pre>| stage7_optional_policy_eval    | worst_baseline_by_risk             | first_action_hold                            | Worst baseline by risk                       |</pre>
+<pre>| stage7_optional_policy_eval    | worst_baseline_mean_l2_drift       | 183.9531135559082                            | Worst baseline drift                         |</pre>
+
+<h2>Dataset probe</h2>
+
+<ul>
+<li>Selected dataset: `lerobot/pusht`</li>
+<li>Dataset status: `loaded`</li>
+<li>Dataset split: `train`</li>
+<li>Sample rows loaded: `80`</li>
+<li>Episode groups: `1`</li>
+</ul>
+
+<p>The project did not require LeRobot installation for dataset probing, which is important for Kaggle stability.</p>
+
+<h2>Stage 3: Action trace metrics</h2>
+
+<pre>|   episode_id |   num_steps |   action_dim |   smoothness_mean_l2_step_delta |   trajectory_drift_l2 |   trajectory_path_l2 |   action_magnitude_l2_mean |   timestamp_gap_mean |</pre>
+<pre>|-------------:|------------:|-------------:|--------------------------------:|----------------------:|---------------------:|---------------------------:|---------------------:|</pre>
+<pre>|            0 |         161 |            2 |                         8.13005 |               292.262 |             1300.81  |                    369.591 |                  0.1 |</pre>
+<pre>|            1 |         118 |            2 |                         9.53785 |               141.481 |             1115.93  |                    379.044 |                  0.1 |</pre>
+<pre>|            2 |         141 |            2 |                         6.45899 |               163.982 |              904.259 |                    278.534 |                  0.1 |</pre>
+<pre>|            3 |          92 |            2 |                         8.75033 |               126.657 |              796.28  |                    445.926 |                  0.1 |</pre>
+
+<p>Stage 3 established the reference action traces used later by the async simulator and baseline evaluation.</p>
+
+<h2>Stage 4: Visual robustness</h2>
+
+<ul>
+<li>Images sampled: `12`</li>
+<li>Image source: `hf_repo_video_file`</li>
+<li>Visual metric rows: `144`</li>
+<li>Policy drift measured: `False`</li>
+</ul>
+
+<pre>| perturbation     |   severity |   num_samples |   mae_mean |    mse_mean |   psnr_mean |   brightness_shift_mean |   contrast_ratio_mean |   edge_energy_ratio_mean |</pre>
+<pre>|:-----------------|-----------:|--------------:|-----------:|------------:|------------:|------------------------:|----------------------:|-------------------------:|</pre>
+<pre>| blur             |       1    |            12 | 0.00922355 | 0.000838782 |     30.7646 |            -1.59691e-05 |              0.903525 |                 0.593312 |</pre>
+<pre>| blur             |       2    |            12 | 0.0121627  | 0.00129584  |     28.8751 |             0.000488063 |              0.843261 |                 0.496794 |</pre>
+<pre>| brightness       |       0.2  |            12 | 0.00847423 | 0.000518669 |     32.8522 |             0.00847419  |              0.805141 |                 0.618853 |</pre>
+<pre>| brightness       |       0.5  |            12 | 0.0142057  | 0.0018613   |     27.302  |             0.0142057   |              0.558261 |                 0.413632 |</pre>
+<pre>| center_crop      |       0.75 |            12 | 0.0324084  | 0.0105355   |     19.7737 |            -0.0108216   |              1.2986   |                 0.867987 |</pre>
+<pre>| contrast         |       0.2  |            12 | 0.00427946 | 0.000281143 |     35.5108 |            -0.00390635  |              1.18626  |                 1.17487  |</pre>
+<pre>| contrast         |       0.5  |            12 | 0.0105407  | 0.0017325   |     27.6133 |            -0.00993048  |              1.46283  |                 1.43494  |</pre>
+<pre>| jpeg             |       0.5  |            12 | 0.00330454 | 8.19164e-05 |     40.8811 |             0.00220539  |              0.978788 |                 1.0317   |</pre>
+<pre>| jpeg             |       0.75 |            12 | 0.00571008 | 0.000248298 |     36.0614 |            -0.000474274 |              1.04288  |                 1.30191  |</pre>
+<pre>| random_occlusion |       0.15 |            12 | 0.00358092 | 0.00127963  |     28.9293 |             0.00316824  |              0.922018 |                 0.97702  |</pre>
+<pre>| random_occlusion |       0.3  |            12 | 0.0100065  | 0.00332455  |     24.7827 |             0.00757887  |              0.757585 |                 0.774563 |</pre>
+<pre>| resolution_drop  |       0.5  |            12 | 0.00662704 | 0.0014559   |     28.3708 |             0.00259613  |              0.983064 |                 0.608931 |</pre>
+
+<p>Stage 4 used real frames extracted from Hugging Face repository video files. It measured visual severity only; it did not claim policy action drift.</p>
+
+<h2>Stage 5: Instruction sensitivity</h2>
+
+<ul>
+<li>Raw instruction-like records: `512`</li>
+<li>Natural-language unique records: `0`</li>
+<li>Symbolic fallback used: `True`</li>
+<li>Perturbation rows: `4`</li>
+</ul>
+
+<p>Important limitation: `lerobot/pusht` did not expose natural-language instructions in the sampled rows. Stage 5 therefore produced symbolic task-label perturbations only. This should not be marketed as natural-language instruction robustness.</p>
+
+<pre>| perturbation        | kind                | is_natural_language   |   num_rows |   mean_word_count_delta |   mean_char_count_delta |   mean_lexical_overlap |</pre>
+<pre>|:--------------------|:--------------------|:----------------------|-----------:|------------------------:|------------------------:|-----------------------:|</pre>
+<pre>| original            | identity            | False                 |          1 |                       0 |                       0 |                    1   |</pre>
+<pre>| symbolic_ambiguous  | symbolic_ambiguity  | False                 |          1 |                       0 |                      -3 |                    0   |</pre>
+<pre>| symbolic_distractor | symbolic_distractor | False                 |          1 |                       1 |                      24 |                    0.5 |</pre>
+<pre>| symbolic_mask       | symbolic_masking    | False                 |          1 |                       1 |                       7 |                    0   |</pre>
+
+<h2>Stage 6: Async deployment-stress simulation</h2>
+
+<ul>
+<li>Episodes: `4`</li>
+<li>Scenarios: `26`</li>
+<li>Raw rows: `104`</li>
+</ul>
+
+<p>Top mode by normalized drift:</p>
+
+<ul>
+<li>Mode: `action_horizon_mismatch`</li>
+<li>Normalized mean L2 drift: `0.3330325318685965`</li>
+<li>Mean L2 drift: `121.46199913024903`</li>
+<li>Recovery delay proxy: `123.4`</li>
+</ul>
+
+<p>Top risk scenario:</p>
+
+<ul>
+<li>Mode: `action_horizon_mismatch`</li>
+<li>Params: `{&quot;actual_horizon&quot;: 8, &quot;expected_horizon&quot;: 4}`</li>
+<li>Risk score proxy: `2.5562635495893855`</li>
+<li>Mean L2 drift: `138.2900505065918`</li>
+<li>Quality score proxy: `0.727326073641731`</li>
+</ul>
+
+<pre>| mode                        | params_json                                  |   mean_l2_drift_mean |   normalized_mean_l2_drift_mean |   smoothness_degradation_mean |   recovery_delay_proxy_mean |   compute_saving_proxy_mean |   quality_score_proxy_mean |   risk_score_proxy |</pre>
+<pre>|:----------------------------|:---------------------------------------------|---------------------:|--------------------------------:|------------------------------:|----------------------------:|----------------------------:|---------------------------:|-------------------:|</pre>
+<pre>| action_horizon_mismatch     | {&quot;actual_horizon&quot;: 8, &quot;expected_horizon&quot;: 4} |            138.29    |                       0.377663  |                     -4.51917  |                      127    |                      0.875  |                   0.727326 |            2.55626 |</pre>
+<pre>| action_chunk_reuse          | {&quot;chunk_size&quot;: 16}                           |             52.1962  |                       0.142225  |                     -1.87024  |                      126.75 |                      0.9375 |                   0.87557  |            2.45953 |</pre>
+<pre>| reduced_inference_frequency | {&quot;frequency_divisor&quot;: 16}                    |             52.1962  |                       0.142225  |                     -1.87024  |                      126.75 |                      0.9375 |                   0.87557  |            2.45953 |</pre>
+<pre>| action_horizon_mismatch     | {&quot;actual_horizon&quot;: 2, &quot;expected_horizon&quot;: 8} |            114.339   |                       0.317278  |                     -0.757125 |                      121    |                      0.5    |                   0.760002 |            2.41387 |</pre>
+<pre>| action_horizon_mismatch     | {&quot;actual_horizon&quot;: 4, &quot;expected_horizon&quot;: 8} |            108.893   |                       0.298481  |                     -0.757125 |                      121    |                      0.75   |                   0.770605 |            2.41027 |</pre>
+<pre>| action_horizon_mismatch     | {&quot;actual_horizon&quot;: 4, &quot;expected_horizon&quot;: 2} |            134.766   |                       0.367552  |                     -4.41449  |                      127    |                      0.75   |                   0.732706 |            2.40553 |</pre>
+<pre>| action_horizon_mismatch     | {&quot;actual_horizon&quot;: 2, &quot;expected_horizon&quot;: 4} |            111.023   |                       0.304189  |                     -0.306532 |                      121    |                      0.5    |                   0.767245 |            2.2833  |</pre>
+<pre>| action_chunk_reuse          | {&quot;chunk_size&quot;: 8}                            |             26.727   |                       0.072854  |                     -0.873878 |                      123.75 |                      0.875  |                   0.932145 |            2.249   |</pre>
+<pre>| frame_skip                  | {&quot;skip&quot;: 8}                                  |             26.727   |                       0.072854  |                     -0.873878 |                      123.75 |                      0.875  |                   0.932145 |            2.249   |</pre>
+<pre>| reduced_inference_frequency | {&quot;frequency_divisor&quot;: 8}                     |             26.727   |                       0.072854  |                     -0.873878 |                      123.75 |                      0.875  |                   0.932145 |            2.249   |</pre>
+<pre>| action_chunk_reuse          | {&quot;chunk_size&quot;: 4}                            |             11.9396  |                       0.0326472 |                     -0.344993 |                      119    |                      0.75   |                   0.968395 |            2.01045 |</pre>
+<pre>| frame_skip                  | {&quot;skip&quot;: 4}                                  |             11.9396  |                       0.0326472 |                     -0.344993 |                      119    |                      0.75   |                   0.968395 |            2.01045 |</pre>
+<pre>| reduced_inference_frequency | {&quot;frequency_divisor&quot;: 4}                     |             11.9396  |                       0.0326472 |                     -0.344993 |                      119    |                      0.75   |                   0.968395 |            2.01045 |</pre>
+<pre>| observation_delay           | {&quot;delay_steps&quot;: 8}                           |             58.2029  |                       0.158927  |                     -0.344207 |                      126.5  |                      0      |                   0.86301  |            1.53242 |</pre>
+<pre>| action_chunk_reuse          | {&quot;chunk_size&quot;: 2}                            |              4.09747 |                       0.0111841 |                     -0.101    |                       94    |                      0.5    |                   0.988941 |            1.48035 |</pre>
+
+<p>This is the main systems contribution of the current run: recorded action traces can be stress-tested under realistic deployment distortions without needing paid APIs or robot hardware.</p>
+
+<h2>Stage 7: Optional baseline / policy evaluation</h2>
+
+<ul>
+<li>Baselines: `8`</li>
+<li>Evaluation rows: `32`</li>
+<li>Real policy loaded: `False`</li>
+<li>Real policy attempted: `False`</li>
+</ul>
+
+<p>Top baseline by quality:</p>
+
+<ul>
+<li>Baseline: `replay_oracle`</li>
+<li>Quality score proxy: `1.0`</li>
+<li>Normalized drift: `0.0`</li>
+</ul>
+
+<p>Worst baseline by risk:</p>
+
+<ul>
+<li>Baseline: `first_action_hold`</li>
+<li>Risk score proxy: `2.791916523575783`</li>
+<li>Mean L2 drift: `183.9531135559082`</li>
+</ul>
+
+<pre>| baseline                    |   mean_l2_drift_mean |   normalized_mean_l2_drift_mean |   quality_score_proxy_mean |   smoothness_degradation_mean |   hold_fraction_mean |   recovery_delay_proxy_mean |   risk_score_proxy |</pre>
+<pre>|:----------------------------|---------------------:|--------------------------------:|---------------------------:|------------------------------:|---------------------:|----------------------------:|-------------------:|</pre>
+<pre>| first_action_hold           |            183.953   |                       0.521917  |                   0.665165 |                    -8.2193    |            1         |                      127    |          2.79192   |</pre>
+<pre>| mean_action                 |            105.182   |                       0.289828  |                   0.775969 |                    -8.2193    |            1         |                      127    |          2.55983   |</pre>
+<pre>| chunk_replay_8              |             26.727   |                       0.072854  |                   0.932145 |                    -0.873878  |            0.878259  |                      123.75 |          2.18861   |</pre>
+<pre>| nearest_neighbor_time_50pct |            133.079   |                       0.362933  |                   0.735204 |                    -4.39077   |            0.507576  |                      127    |          2.14051   |</pre>
+<pre>| chunk_replay_4              |             11.9396  |                       0.0326472 |                   0.968395 |                    -0.344993  |            0.755943  |                      119    |          1.97859   |</pre>
+<pre>| lag1_hold                   |              8.15124 |                       0.0223112 |                   0.978179 |                    -0.0236031 |            0.0524306 |                       94    |          1.01474   |</pre>
+<pre>| linear_extrapolation        |              3.73067 |                       0.0102885 |                   0.989817 |                     1.21192   |            0.0468864 |                       50.5  |          0.562175  |</pre>
+<pre>| replay_oracle               |              0       |                       0         |                   1        |                     0         |            0.0463351 |                        0    |          0.0463351 |</pre>
+
+<p>Stage 7 did not load a real VLA policy. That is intentional. The current artifact is a robust evaluation scaffold plus sanity baselines, not a policy benchmark.</p>
+
+<h2>Evidence index</h2>
+
+<pre>| stage                          | label                           | kind       | exists   | path                                                                                                    |</pre>
+<pre>|:-------------------------------|:--------------------------------|:-----------|:---------|:--------------------------------------------------------------------------------------------------------|</pre>
+<pre>| stage0_env_probe               | env_probe_json                  | saved_file | True     | /kaggle/working/RoboTrace/env_probe/env_probe.json                                                      |</pre>
+<pre>| stage0_env_probe               | nvidia_smi_txt                  | saved_file | True     | /kaggle/working/RoboTrace/env_probe/nvidia_smi.txt                                                      |</pre>
+<pre>| stage0_env_probe               | pip_freeze_txt                  | saved_file | True     | /kaggle/working/RoboTrace/env_probe/pip_freeze.txt                                                      |</pre>
+<pre>| stage2_dataset_probe           | dataset_schema_md               | report     | True     | /kaggle/working/RoboTrace/case_studies/dataset_probe/dataset_schema.md                                  |</pre>
+<pre>| stage2_dataset_probe           | dataset_probe_json              | saved_file | True     | /kaggle/working/RoboTrace/case_studies/dataset_probe/dataset_probe.json                                 |</pre>
+<pre>| stage2_dataset_probe           | dataset_sample_jsonl            | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage2_dataset_sample_rows.jsonl                                  |</pre>
+<pre>| stage2_dataset_probe           | episode_summary_csv             | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/stage2_episode_probe_summary.csv                            |</pre>
+<pre>| stage3_trace_metrics           | trace_report_md                 | report     | True     | /kaggle/working/RoboTrace/case_studies/trace_metrics/stage3_trace_metrics_report.md                     |</pre>
+<pre>| stage3_trace_metrics           | dataset_summary_json            | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/stage3_dataset_summary.json                                 |</pre>
+<pre>| stage3_trace_metrics           | episode_metrics_jsonl           | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage3_episode_metrics.jsonl                                      |</pre>
+<pre>| stage3_trace_metrics           | episode_summary_csv             | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/stage3_episode_summary.csv                                  |</pre>
+<pre>| stage3_trace_metrics           | episode_traces_npz              | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage3_episode_traces.npz                                         |</pre>
+<pre>| stage3_trace_metrics           | step_metrics_jsonl              | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage3_step_metrics.jsonl                                         |</pre>
+<pre>| stage4_visual_robustness       | preview_grid                    | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage4_visual_preview_grid.png                                |</pre>
+<pre>| stage4_visual_robustness       | severity_bar                    | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage4_visual_severity_bar.png                                |</pre>
+<pre>| stage4_visual_robustness       | severity_heatmap                | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage4_visual_severity_heatmap.png                            |</pre>
+<pre>| stage4_visual_robustness       | visual_report_md                | report     | True     | /kaggle/working/RoboTrace/case_studies/visual_robustness/stage4_visual_robustness_report.md             |</pre>
+<pre>| stage4_visual_robustness       | frame_manifest_json             | saved_file | True     | /kaggle/working/RoboTrace/case_studies/visual_robustness/stage4_extracted_frame_manifest.json           |</pre>
+<pre>| stage4_visual_robustness       | manifest_json                   | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage4_visual_perturbation_manifest.json                          |</pre>
+<pre>| stage4_visual_robustness       | repo_visual_candidates_json     | saved_file | True     | /kaggle/working/RoboTrace/case_studies/visual_robustness/stage4_repo_visual_file_candidates.json        |</pre>
+<pre>| stage4_visual_robustness       | stage4_summary_json             | saved_file | True     | /kaggle/working/RoboTrace/case_studies/visual_robustness/stage4_summary.json                            |</pre>
+<pre>| stage4_visual_robustness       | visual_metrics_jsonl            | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage4_visual_metrics.jsonl                                       |</pre>
+<pre>| stage4_visual_robustness       | visual_summary_csv              | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/stage4_visual_summary.csv                                   |</pre>
+<pre>| stage4_visual_robustness       | visual_summary_json             | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/stage4_visual_summary.json                                  |</pre>
+<pre>| stage5_instruction_sensitivity | length_shift                    | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage5_instruction_length_shift.png                           |</pre>
+<pre>| stage5_instruction_sensitivity | perturbation_counts             | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage5_instruction_perturbation_counts.png                    |</pre>
+<pre>| stage5_instruction_sensitivity | instruction_report_md           | report     | True     | /kaggle/working/RoboTrace/case_studies/instruction_sensitivity/stage5_instruction_sensitivity_report.md |</pre>
+<pre>| stage5_instruction_sensitivity | instruction_manifest_json       | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage5_instruction_manifest.json                                  |</pre>
+<pre>| stage5_instruction_sensitivity | instruction_perturbations_jsonl | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage5_instruction_perturbations.jsonl                            |</pre>
+<pre>| stage5_instruction_sensitivity | instruction_records_jsonl       | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage5_instruction_records.jsonl                                  |</pre>
+<pre>| stage5_instruction_sensitivity | instruction_summary_csv         | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/stage5_instruction_summary.csv                              |</pre>
+<pre>| stage5_instruction_sensitivity | instruction_summary_json        | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/stage5_instruction_summary.json                             |</pre>
+<pre>| stage5_instruction_sensitivity | stage5_summary_json             | saved_file | True     | /kaggle/working/RoboTrace/case_studies/instruction_sensitivity/stage5_summary.json                      |</pre>
+<pre>| stage6_async_simulation        | drift_by_mode                   | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage6_async_drift_by_mode.png                                |</pre>
+<pre>| stage6_async_simulation        | latency_quality                 | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage6_latency_quality_tradeoff.png                           |</pre>
+<pre>| stage6_async_simulation        | metric_heatmap                  | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage6_async_metric_heatmap.png                               |</pre>
+<pre>| stage6_async_simulation        | recovery_delay                  | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage6_recovery_delay_proxy.png                               |</pre>
+<pre>| stage6_async_simulation        | smoothness_by_mode              | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage6_async_smoothness_degradation_by_mode.png               |</pre>
+<pre>| stage6_async_simulation        | trace_overlay                   | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage6_trace_overlay_first_episode.png                        |</pre>
+<pre>| stage6_async_simulation        | async_report_md                 | report     | True     | /kaggle/working/RoboTrace/case_studies/async_simulation/async_report.md                                 |</pre>
+<pre>| stage6_async_simulation        | async_candidate_traces_npz      | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage6_async_candidate_traces.npz                                 |</pre>
+<pre>| stage6_async_simulation        | async_dataset_summary_json      | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/async_dataset_summary.json                                  |</pre>
+<pre>| stage6_async_simulation        | async_raw_jsonl                 | saved_file | True     | /kaggle/working/RoboTrace/results/raw/async_raw.jsonl                                                   |</pre>
+<pre>| stage6_async_simulation        | async_summary_csv               | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/async_summary.csv                                           |</pre>
+<pre>| stage6_async_simulation        | stage6_summary_json             | saved_file | True     | /kaggle/working/RoboTrace/case_studies/async_simulation/stage6_summary.json                             |</pre>
+<pre>| stage7_optional_policy_eval    | baseline_drift                  | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage7_baseline_mean_drift.png                                |</pre>
+<pre>| stage7_optional_policy_eval    | baseline_heatmap                | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage7_baseline_metric_heatmap.png                            |</pre>
+<pre>| stage7_optional_policy_eval    | baseline_quality                | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage7_baseline_quality_score.png                             |</pre>
+<pre>| stage7_optional_policy_eval    | baseline_recovery               | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage7_baseline_recovery_delay.png                            |</pre>
+<pre>| stage7_optional_policy_eval    | trace_overlay                   | figure     | True     | /kaggle/working/RoboTrace/results/figures/stage7_baseline_trace_overlay.png                             |</pre>
+<pre>| stage7_optional_policy_eval    | policy_eval_report_md           | report     | True     | /kaggle/working/RoboTrace/case_studies/optional_policy_eval/stage7_policy_eval_report.md                |</pre>
+<pre>| stage7_optional_policy_eval    | baseline_raw_jsonl              | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage7_baseline_eval_raw.jsonl                                    |</pre>
+<pre>| stage7_optional_policy_eval    | baseline_rollouts_npz           | saved_file | True     | /kaggle/working/RoboTrace/results/raw/stage7_baseline_rollouts.npz                                      |</pre>
+<pre>| stage7_optional_policy_eval    | baseline_summary_csv            | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/stage7_baseline_summary.csv                                 |</pre>
+<pre>| stage7_optional_policy_eval    | policy_eval_summary_json        | saved_file | True     | /kaggle/working/RoboTrace/results/summaries/stage7_policy_eval_summary.json                             |</pre>
+<pre>| stage7_optional_policy_eval    | stage7_summary_json             | saved_file | True     | /kaggle/working/RoboTrace/case_studies/optional_policy_eval/stage7_summary.json                         |</pre>
+
+<p>Missing/optional evidence paths are excluded from the public evidence index and stored in:</p>
+
+<ul>
+<li>`/kaggle/working/RoboTrace/results/summaries/robotrace_missing_evidence_manifest.json`</li>
+</ul>
+
+<h2>Claims allowed</h2>
+
+<ul>
+<li>RoboTrace runs fully in Kaggle under the tested environment.</li>
+<li>The core package, metrics, perturbation logic, async simulator, and report writers pass CPU-safe tests.</li>
+<li>The run successfully probes `lerobot/pusht` without requiring LeRobot installation.</li>
+<li>The run computes action-trace metrics over 4 usable episodes and 512 step rows.</li>
+<li>The visual robustness suite perturbs real frames extracted from dataset repository video files.</li>
+<li>The instruction sensitivity stage found only symbolic task labels for this dataset, not natural language.</li>
+<li>The async simulator identifies action horizon mismatch as the highest-risk deployment-stress mode in this run.</li>
+<li>The optional policy stage provides action-only sanity baselines and explicitly records that no real policy was loaded.</li>
+</ul>
+
+<h2>Claims not allowed</h2>
+
+<ul>
+<li>Do not claim real robot hardware validation.</li>
+<li>Do not claim real VLA policy robustness.</li>
+<li>Do not claim natural-language instruction robustness for `lerobot/pusht` from this run.</li>
+<li>Do not claim task success or success-rate degradation.</li>
+<li>Do not claim measured serving latency; Stage 6 latency values are proxies.</li>
+<li>Do not claim SOTA benchmark status.</li>
+</ul>
+
+<h2>Next stages</h2>
+
+<p>1. Stage 9: Prepare Hugging Face dataset/Space release folder, with dataset card and dashboard scaffold.</p>
+<p>2. Stage 10: GitHub packaging and push, only after inspecting the generated report and avoiding large raw artifacts.</p>
+<p>3. Optional later stage: isolated real-policy loading, but only in a separate notebook with pinned versions and fallback behavior.</p>
+
+<h2>Final verdict</h2>
+
+<p>RoboTrace is currently a credible low-cost evaluation and deployment-stress toolkit artifact. Its strongest angle is not policy performance; it is careful, reproducible stress testing of action traces under practical deployment distortions.</p>
+</body>
+</html>

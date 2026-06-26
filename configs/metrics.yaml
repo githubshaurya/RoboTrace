@@ -1,0 +1,17 @@
+action_metrics:
+  - smoothness
+  - l1_step_delta
+  - l2_step_delta
+  - acceleration
+  - jerk
+  - drift
+  - magnitude
+  - timestamp_gaps
+  - gripper_distribution
+
+async_metrics:
+  - action_drift
+  - smoothness_degradation
+  - stale_observation_severity
+  - chunk_boundary_discontinuity
+  - recovery_delay_proxy

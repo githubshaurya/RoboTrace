@@ -1,0 +1,9 @@
+# RoboTrace file handling
+*.ipynb text
+*.md text
+*.py text
+*.json text
+*.csv text
+*.png binary
+*.zip binary
+*.npz binary

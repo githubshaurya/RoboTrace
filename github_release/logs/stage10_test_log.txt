@@ -1,0 +1,9 @@
+Runner: pytest
+
+[pytest stdout]
+..............                                                           [100%]
+
+
+[pytest stderr]
+
+

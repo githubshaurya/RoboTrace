@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use RoboTrace, please cite it."
+title: "RoboTrace: Low-Cost Robustness and Deployment-Stress Evaluation for Vision-Language-Action Systems"
+authors:
+  - family-names: "Omar"
+    given-names: "Shaurya"
+repository-code: "https://github.com/githubshaurya/RoboTrace"
+date-released: "2026-06-25"
+license: "MIT"
+keywords:
+  - robotics
+  - embodied-ai
+  - vision-language-action
+  - robustness
+  - deployment-stress
+  - evaluation

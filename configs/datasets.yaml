@@ -1,0 +1,6 @@
+default:
+  max_episodes: 3
+  max_frames_per_episode: 128
+  stream_first: true
+  require_lerobot: false
+  allow_fallback_loader: true

@@ -1,0 +1,167 @@
+{
+  "stage": "stage_7_optional_baseline_policy_eval",
+  "timestamp_utc": "2026-06-26T06:55:34.978378+00:00",
+  "status": "PASS",
+  "dataset": "lerobot/pusht",
+  "split": "train",
+  "num_episodes": 4,
+  "num_baselines": 8,
+  "num_eval_rows": 32,
+  "real_policy_loaded": false,
+  "real_policy_name": null,
+  "real_policy_error": null,
+  "real_policy_attempt": {
+    "attempted": false,
+    "reason": "Skipped by default. This stage is action-only baseline evaluation. Real policy loading is high dependency risk and should be isolated."
+  },
+  "optional_policy_probe": {
+    "lerobot": {
+      "module": "lerobot",
+      "installed": false,
+      "version": null,
+      "error": "ModuleNotFoundError"
+    },
+    "torch": {
+      "module": "torch",
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "error": null
+    },
+    "transformers": {
+      "module": "transformers",
+      "installed": true,
+      "version": "5.0.0",
+      "error": null
+    },
+    "diffusers": {
+      "module": "diffusers",
+      "installed": true,
+      "version": "0.37.1",
+      "error": null
+    }
+  },
+  "baseline_summary": [
+    {
+      "baseline": "first_action_hold",
+      "num_episodes": 4,
+      "num_rows": 4,
+      "mean_l2_drift_mean": 183.9531135559082,
+      "mean_l2_drift_max": 236.9634552001953,
+      "normalized_mean_l2_drift_mean": 0.5219165235757828,
+      "quality_score_proxy_mean": 0.665164500900827,
+      "smoothness_degradation_mean": -8.21930456161499,
+      "hold_fraction_mean": 1.0,
+      "recovery_delay_proxy_mean": 127.0,
+      "acceleration_l2_degradation_mean": -3.706529378890991,
+      "jerk_l2_degradation_mean": -5.1085041761398315,
+      "risk_score_proxy": 2.791916523575783
+    },
+    {
+      "baseline": "mean_action",
+      "num_episodes": 4,
+      "num_rows": 4,
+      "mean_l2_drift_mean": 105.18170356750488,
+      "mean_l2_drift_max": 124.33889770507812,
+      "normalized_mean_l2_drift_mean": 0.28982769697904587,
+      "quality_score_proxy_mean": 0.7759688947339148,
+      "smoothness_degradation_mean": -8.21930456161499,
+      "hold_fraction_mean": 1.0,
+      "recovery_delay_proxy_mean": 127.0,
+      "acceleration_l2_degradation_mean": -3.706529378890991,
+      "jerk_l2_degradation_mean": -5.1085041761398315,
+      "risk_score_proxy": 2.559827696979046
+    },
+    {
+      "baseline": "chunk_replay_8",
+      "num_episodes": 4,
+      "num_rows": 4,
+      "mean_l2_drift_mean": 26.72701120376587,
+      "mean_l2_drift_max": 32.60305404663086,
+      "normalized_mean_l2_drift_mean": 0.07285395823419094,
+      "quality_score_proxy_mean": 0.9321449782377748,
+      "smoothness_degradation_mean": -0.8738781213760376,
+      "hold_fraction_mean": 0.878258547008547,
+      "recovery_delay_proxy_mean": 123.75,
+      "acceleration_l2_degradation_mean": 11.083120346069336,
+      "jerk_l2_degradation_mean": 24.697699666023254,
+      "risk_score_proxy": 2.188612505242738
+    },
+    {
+      "baseline": "nearest_neighbor_time_50pct",
+      "num_episodes": 4,
+      "num_rows": 4,
+      "mean_l2_drift_mean": 133.07926177978516,
+      "mean_l2_drift_max": 173.7645263671875,
+      "normalized_mean_l2_drift_mean": 0.36293261498212814,
+      "quality_score_proxy_mean": 0.7352039229302172,
+      "smoothness_degradation_mean": -4.390771567821503,
+      "hold_fraction_mean": 0.507575931013431,
+      "recovery_delay_proxy_mean": 127.0,
+      "acceleration_l2_degradation_mean": 4.013777136802673,
+      "jerk_l2_degradation_mean": 10.270585656166077,
+      "risk_score_proxy": 2.140508545995559
+    },
+    {
+      "baseline": "chunk_replay_4",
+      "num_episodes": 4,
+      "num_rows": 4,
+      "mean_l2_drift_mean": 11.939557790756226,
+      "mean_l2_drift_max": 14.172884941101074,
+      "normalized_mean_l2_drift_mean": 0.032647228334099054,
+      "quality_score_proxy_mean": 0.9683947676819554,
+      "smoothness_degradation_mean": -0.34499311447143555,
+      "hold_fraction_mean": 0.7559428418803419,
+      "recovery_delay_proxy_mean": 119.0,
+      "acceleration_l2_degradation_mean": 12.130543947219849,
+      "jerk_l2_degradation_mean": 26.735983967781067,
+      "risk_score_proxy": 1.978590070214441
+    },
+    {
+      "baseline": "lag1_hold",
+      "num_episodes": 4,
+      "num_rows": 4,
+      "mean_l2_drift_mean": 8.151242852210999,
+      "mean_l2_drift_max": 9.45701789855957,
+      "normalized_mean_l2_drift_mean": 0.022311199456453323,
+      "quality_score_proxy_mean": 0.9781794931993177,
+      "smoothness_degradation_mean": -0.023603081703186035,
+      "hold_fraction_mean": 0.05243055555555556,
+      "recovery_delay_proxy_mean": 94.0,
+      "acceleration_l2_degradation_mean": 0.07699096202850342,
+      "jerk_l2_degradation_mean": 0.1261582374572754,
+      "risk_score_proxy": 1.014741755012009
+    },
+    {
+      "baseline": "linear_extrapolation",
+      "num_episodes": 4,
+      "num_rows": 4,
+      "mean_l2_drift_mean": 3.730671525001526,
+      "mean_l2_drift_max": 4.273360252380371,
+      "normalized_mean_l2_drift_mean": 0.010288464138284326,
+      "quality_score_proxy_mean": 0.9898174832540654,
+      "smoothness_degradation_mean": 1.2119203805923462,
+      "hold_fraction_mean": 0.046886446886446886,
+      "recovery_delay_proxy_mean": 50.5,
+      "acceleration_l2_degradation_mean": 4.655283570289612,
+      "jerk_l2_degradation_mean": 8.715913891792297,
+      "risk_score_proxy": 0.5621749110247312
+    },
+    {
+      "baseline": "replay_oracle",
+      "num_episodes": 4,
+      "num_rows": 4,
+      "mean_l2_drift_mean": 0.0,
+      "mean_l2_drift_max": 0.0,
+      "normalized_mean_l2_drift_mean": 0.0,
+      "quality_score_proxy_mean": 1.0,
+      "smoothness_degradation_mean": 0.0,
+      "hold_fraction_mean": 0.046335088522588525,
+      "recovery_delay_proxy_mean": 0.0,
+      "acceleration_l2_degradation_mean": 0.0,
+      "jerk_l2_degradation_mean": 0.0,
+      "risk_score_proxy": 0.046335088522588525
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}

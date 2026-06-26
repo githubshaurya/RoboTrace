@@ -1,0 +1,16 @@
+{
+  "stage": "stage_8_corrected_missing_evidence_manifest",
+  "timestamp_utc": "2026-06-26T06:55:41.601037+00:00",
+  "note": "Missing paths are excluded from the public evidence index but preserved here for audit.",
+  "missing_evidence_count": 1,
+  "missing_evidence": [
+    {
+      "stage": "stage2_dataset_probe",
+      "label": "sample_episode_preview_png",
+      "kind": "saved_file",
+      "path": "/kaggle/working/RoboTrace/case_studies/dataset_probe/sample_episode_preview.png",
+      "exists": false,
+      "size_bytes": null
+    }
+  ]
+}

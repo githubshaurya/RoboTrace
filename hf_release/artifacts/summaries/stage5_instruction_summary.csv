@@ -1,0 +1,5 @@
+perturbation,kind,is_natural_language,num_rows,mean_word_count_delta,mean_char_count_delta,mean_lexical_overlap
+original,identity,False,1,0.0,0.0,1.0
+symbolic_ambiguous,symbolic_ambiguity,False,1,0.0,-3.0,0.0
+symbolic_distractor,symbolic_distractor,False,1,1.0,24.0,0.5
+symbolic_mask,symbolic_masking,False,1,1.0,7.0,0.0

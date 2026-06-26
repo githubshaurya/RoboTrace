@@ -1,0 +1,44 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+.venv/
+venv/
+*.key
+*.pem
+.env*
+!*.env.example
+results/raw/*
+results/summaries/*
+results/figures/*
+results/failure_cases/*
+!results/raw/.gitkeep
+!results/summaries/.gitkeep
+!results/figures/.gitkeep
+!results/failure_cases/.gitkeep
+env_probe/pip_freeze.txt
+env_probe/nvidia_smi.txt
+.DS_Store
+.vscode/
+.idea/
+
+# RoboTrace generated/runtime artifacts
+*.pyc
+.mypy_cache/
+.ruff_cache/
+# Secrets and local env
+.env.*
+*token*
+*secret*
+kaggle.json
+# Large/raw generated artifacts
+results/raw/*.npz
+results/raw/*.jsonl
+case_studies/**/downloaded_visual_sources/
+case_studies/**/sample_frames/
+hf_release/space_app/artifacts/figures/*.png
+github_release/export/
+# Keep curated release bundle if desired, but avoid accidental duplicates
+*.tmp

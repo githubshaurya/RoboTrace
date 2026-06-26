@@ -1,0 +1,39 @@
+stage,metric,value,interpretation
+stage0_env_probe,overall_status,PASS,Kaggle environment probe status
+stage0_env_probe,python,,Python runtime
+stage0_env_probe,cuda_available,,CUDA availability
+stage1_core,tests_ok,True,Core unit tests
+stage1_core,num_project_files,46,Created/indexed project files
+stage2_dataset_probe,selected_dataset,lerobot/pusht,Dataset selected for staged probe
+stage2_dataset_probe,dataset_status,loaded,Dataset loading status
+stage2_dataset_probe,num_sample_rows_loaded,80,Rows sampled for schema probe
+stage2_dataset_probe,num_episode_groups,1,Episode groups observed
+stage3_trace_metrics,num_usable_episodes,4,Episodes with usable action traces
+stage3_trace_metrics,num_step_metric_rows,512,Per-step metric rows
+stage3_trace_metrics,smoothness_mean_l2_step_delta_mean,8.219304659792309,Dataset-level action trace metric
+stage3_trace_metrics,trajectory_drift_l2_mean,181.0955104827881,Dataset-level action trace metric
+stage3_trace_metrics,action_magnitude_l2_mean_mean,368.27360229314803,Dataset-level action trace metric
+stage3_trace_metrics,num_steps_mean,128.0,Dataset-level action trace metric
+stage4_visual_robustness,num_images,12,Real frames sampled for visual perturbations
+stage4_visual_robustness,image_source,hf_repo_video_file,Visual frame source
+stage4_visual_robustness,num_metric_rows,144,Visual perturbation metric rows
+stage4_visual_robustness,policy_drift_measured,False,Policy drift intentionally not measured
+stage5_instruction_sensitivity,num_raw_instruction_records,512,Instruction-like raw records
+stage5_instruction_sensitivity,num_natural_language_unique,0,Natural-language instruction count
+stage5_instruction_sensitivity,symbolic_fallback_used,True,Whether symbolic task fallback was used
+stage5_instruction_sensitivity,num_perturbation_rows,4,Instruction perturbation rows
+stage6_async_simulation,num_episodes,4,Episodes used in async simulator
+stage6_async_simulation,num_scenarios,26,Async scenario count
+stage6_async_simulation,num_raw_rows,104,Raw async simulation rows
+stage6_async_simulation,top_mode_by_drift,action_horizon_mismatch,Worst async mode by normalized drift
+stage6_async_simulation,top_mode_normalized_mean_l2_drift,0.3330325318685965,Normalized drift for worst mode
+stage6_async_simulation,top_risk_scenario_mode,action_horizon_mismatch,Highest-risk async scenario
+stage6_async_simulation,top_risk_scenario_params,"{""actual_horizon"": 8, ""expected_horizon"": 4}",Highest-risk async scenario params
+stage6_async_simulation,top_risk_scenario_mean_l2_drift,138.2900505065918,Highest-risk mean action drift
+stage7_optional_policy_eval,num_baselines,8,Baseline count
+stage7_optional_policy_eval,num_eval_rows,32,Baseline evaluation rows
+stage7_optional_policy_eval,real_policy_loaded,False,Real policy status
+stage7_optional_policy_eval,top_baseline_by_quality,replay_oracle,Best baseline by quality proxy
+stage7_optional_policy_eval,top_baseline_quality_score,1.0,Best baseline quality proxy
+stage7_optional_policy_eval,worst_baseline_by_risk,first_action_hold,Worst baseline by risk
+stage7_optional_policy_eval,worst_baseline_mean_l2_drift,183.9531135559082,Worst baseline drift

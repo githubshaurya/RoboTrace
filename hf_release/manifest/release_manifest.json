@@ -1,0 +1,692 @@
+{
+  "stage": "stage_9_release_prep",
+  "timestamp_utc": "2026-06-26T06:55:53.038217+00:00",
+  "status": "PASS",
+  "root": "/kaggle/working/RoboTrace",
+  "release_root": "/kaggle/working/RoboTrace/hf_release",
+  "dataset": "lerobot/pusht",
+  "split": "train",
+  "token_presence": {
+    "HF_TOKEN": {
+      "name": "HF_TOKEN",
+      "present": true,
+      "source": "environment"
+    },
+    "GITHUB_TOKEN": {
+      "name": "GITHUB_TOKEN",
+      "present": true,
+      "source": "environment"
+    }
+  },
+  "push_attempted": false,
+  "push_reason": "Stage 9 prepares release artifacts only. It does not push to external services.",
+  "num_release_files": 83,
+  "release_files": [
+    {
+      "group": "reports",
+      "source_path": "/kaggle/working/RoboTrace/reports/robotrace_report.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/reports/robotrace_report.md",
+      "relative_release_path": "artifacts/reports/robotrace_report.md",
+      "size_bytes": 35710,
+      "exists": true
+    },
+    {
+      "group": "reports",
+      "source_path": "/kaggle/working/RoboTrace/reports/robotrace_public_summary.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/reports/robotrace_public_summary.md",
+      "relative_release_path": "artifacts/reports/robotrace_public_summary.md",
+      "size_bytes": 774,
+      "exists": true
+    },
+    {
+      "group": "reports",
+      "source_path": "/kaggle/working/RoboTrace/reports/limitations.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/reports/limitations.md",
+      "relative_release_path": "artifacts/reports/limitations.md",
+      "size_bytes": 1290,
+      "exists": true
+    },
+    {
+      "group": "reports",
+      "source_path": "/kaggle/working/RoboTrace/reports/reproducibility.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/reports/reproducibility.md",
+      "relative_release_path": "artifacts/reports/reproducibility.md",
+      "size_bytes": 1009,
+      "exists": true
+    },
+    {
+      "group": "reports",
+      "source_path": "/kaggle/working/RoboTrace/reports/failure_taxonomy.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/reports/failure_taxonomy.md",
+      "relative_release_path": "artifacts/reports/failure_taxonomy.md",
+      "size_bytes": 1056,
+      "exists": true
+    },
+    {
+      "group": "reports",
+      "source_path": "/kaggle/working/RoboTrace/reports/robotrace_report.html",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/reports/robotrace_report.html",
+      "relative_release_path": "artifacts/reports/robotrace_report.html",
+      "size_bytes": 38845,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/robotrace_final_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/robotrace_final_summary.json",
+      "relative_release_path": "artifacts/summaries/robotrace_final_summary.json",
+      "size_bytes": 2892,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/robotrace_final_metrics.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/robotrace_final_metrics.csv",
+      "relative_release_path": "artifacts/summaries/robotrace_final_metrics.csv",
+      "size_bytes": 3153,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/robotrace_evidence_index.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/robotrace_evidence_index.csv",
+      "relative_release_path": "artifacts/summaries/robotrace_evidence_index.csv",
+      "size_bytes": 7808,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/robotrace_evidence_index.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/robotrace_evidence_index.json",
+      "relative_release_path": "artifacts/summaries/robotrace_evidence_index.json",
+      "size_bytes": 13594,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/robotrace_missing_evidence_manifest.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/robotrace_missing_evidence_manifest.json",
+      "relative_release_path": "artifacts/summaries/robotrace_missing_evidence_manifest.json",
+      "size_bytes": 545,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/stage3_dataset_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/stage3_dataset_summary.json",
+      "relative_release_path": "artifacts/summaries/stage3_dataset_summary.json",
+      "size_bytes": 8247,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/stage4_visual_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/stage4_visual_summary.json",
+      "relative_release_path": "artifacts/summaries/stage4_visual_summary.json",
+      "size_bytes": 5845,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/stage4_visual_summary.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/stage4_visual_summary.csv",
+      "relative_release_path": "artifacts/summaries/stage4_visual_summary.csv",
+      "size_bytes": 2061,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/stage5_instruction_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/stage5_instruction_summary.json",
+      "relative_release_path": "artifacts/summaries/stage5_instruction_summary.json",
+      "size_bytes": 1178,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/stage5_instruction_summary.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/stage5_instruction_summary.csv",
+      "relative_release_path": "artifacts/summaries/stage5_instruction_summary.csv",
+      "size_bytes": 321,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/async_dataset_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/async_dataset_summary.json",
+      "relative_release_path": "artifacts/summaries/async_dataset_summary.json",
+      "size_bytes": 13355,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/async_summary.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/async_summary.csv",
+      "relative_release_path": "artifacts/summaries/async_summary.csv",
+      "size_bytes": 7697,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/stage7_policy_eval_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/stage7_policy_eval_summary.json",
+      "relative_release_path": "artifacts/summaries/stage7_policy_eval_summary.json",
+      "size_bytes": 5920,
+      "exists": true
+    },
+    {
+      "group": "summaries",
+      "source_path": "/kaggle/working/RoboTrace/results/summaries/stage7_baseline_summary.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/summaries/stage7_baseline_summary.csv",
+      "relative_release_path": "artifacts/summaries/stage7_baseline_summary.csv",
+      "size_bytes": 1715,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage3_action_trace_first_episode.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage3_action_trace_first_episode.png",
+      "relative_release_path": "artifacts/figures/stage3_action_trace_first_episode.png",
+      "size_bytes": 89531,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage3_l2_step_delta.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage3_l2_step_delta.png",
+      "relative_release_path": "artifacts/figures/stage3_l2_step_delta.png",
+      "size_bytes": 175924,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage3_action_magnitude_hist.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage3_action_magnitude_hist.png",
+      "relative_release_path": "artifacts/figures/stage3_action_magnitude_hist.png",
+      "size_bytes": 26918,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage4_visual_preview_grid.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage4_visual_preview_grid.png",
+      "relative_release_path": "artifacts/figures/stage4_visual_preview_grid.png",
+      "size_bytes": 78732,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage4_visual_severity_bar.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage4_visual_severity_bar.png",
+      "relative_release_path": "artifacts/figures/stage4_visual_severity_bar.png",
+      "size_bytes": 67464,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage4_visual_severity_heatmap.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage4_visual_severity_heatmap.png",
+      "relative_release_path": "artifacts/figures/stage4_visual_severity_heatmap.png",
+      "size_bytes": 93889,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage5_instruction_perturbation_counts.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage5_instruction_perturbation_counts.png",
+      "relative_release_path": "artifacts/figures/stage5_instruction_perturbation_counts.png",
+      "size_bytes": 49974,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage5_instruction_length_shift.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage5_instruction_length_shift.png",
+      "relative_release_path": "artifacts/figures/stage5_instruction_length_shift.png",
+      "size_bytes": 54510,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage6_async_drift_by_mode.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage6_async_drift_by_mode.png",
+      "relative_release_path": "artifacts/figures/stage6_async_drift_by_mode.png",
+      "size_bytes": 82535,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage6_latency_quality_tradeoff.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage6_latency_quality_tradeoff.png",
+      "relative_release_path": "artifacts/figures/stage6_latency_quality_tradeoff.png",
+      "size_bytes": 68864,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage6_trace_overlay_first_episode.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage6_trace_overlay_first_episode.png",
+      "relative_release_path": "artifacts/figures/stage6_trace_overlay_first_episode.png",
+      "size_bytes": 151089,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage6_async_metric_heatmap.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage6_async_metric_heatmap.png",
+      "relative_release_path": "artifacts/figures/stage6_async_metric_heatmap.png",
+      "size_bytes": 113837,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage6_recovery_delay_proxy.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage6_recovery_delay_proxy.png",
+      "relative_release_path": "artifacts/figures/stage6_recovery_delay_proxy.png",
+      "size_bytes": 85327,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage7_baseline_mean_drift.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage7_baseline_mean_drift.png",
+      "relative_release_path": "artifacts/figures/stage7_baseline_mean_drift.png",
+      "size_bytes": 70520,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage7_baseline_quality_score.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage7_baseline_quality_score.png",
+      "relative_release_path": "artifacts/figures/stage7_baseline_quality_score.png",
+      "size_bytes": 72246,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage7_baseline_trace_overlay.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage7_baseline_trace_overlay.png",
+      "relative_release_path": "artifacts/figures/stage7_baseline_trace_overlay.png",
+      "size_bytes": 133867,
+      "exists": true
+    },
+    {
+      "group": "figures",
+      "source_path": "/kaggle/working/RoboTrace/results/figures/stage7_baseline_metric_heatmap.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/artifacts/figures/stage7_baseline_metric_heatmap.png",
+      "relative_release_path": "artifacts/figures/stage7_baseline_metric_heatmap.png",
+      "size_bytes": 105945,
+      "exists": true
+    },
+    {
+      "group": "root",
+      "source_path": "/kaggle/working/RoboTrace/reports/robotrace_public_summary.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/README_RELEASE_PREVIEW.md",
+      "relative_release_path": "README_RELEASE_PREVIEW.md",
+      "size_bytes": 774,
+      "exists": true
+    },
+    {
+      "group": "dataset_card",
+      "source_path": "generated",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/dataset_card/README.md",
+      "relative_release_path": "dataset_card/README.md",
+      "size_bytes": 2147,
+      "exists": true
+    },
+    {
+      "group": "space_app",
+      "source_path": "generated",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/README.md",
+      "relative_release_path": "space_app/README.md",
+      "size_bytes": 375,
+      "exists": true
+    },
+    {
+      "group": "space_app",
+      "source_path": "generated",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/requirements.txt",
+      "relative_release_path": "space_app/requirements.txt",
+      "size_bytes": 25,
+      "exists": true
+    },
+    {
+      "group": "space_app",
+      "source_path": "generated",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/app.py",
+      "relative_release_path": "space_app/app.py",
+      "size_bytes": 3214,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage3_action_magnitude_hist.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage3_action_magnitude_hist.png",
+      "relative_release_path": "space_app/artifacts/figures/stage3_action_magnitude_hist.png",
+      "size_bytes": 26918,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage3_action_trace_first_episode.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage3_action_trace_first_episode.png",
+      "relative_release_path": "space_app/artifacts/figures/stage3_action_trace_first_episode.png",
+      "size_bytes": 89531,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage3_l2_step_delta.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage3_l2_step_delta.png",
+      "relative_release_path": "space_app/artifacts/figures/stage3_l2_step_delta.png",
+      "size_bytes": 175924,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage4_visual_preview_grid.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage4_visual_preview_grid.png",
+      "relative_release_path": "space_app/artifacts/figures/stage4_visual_preview_grid.png",
+      "size_bytes": 78732,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage4_visual_severity_bar.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage4_visual_severity_bar.png",
+      "relative_release_path": "space_app/artifacts/figures/stage4_visual_severity_bar.png",
+      "size_bytes": 67464,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage4_visual_severity_heatmap.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage4_visual_severity_heatmap.png",
+      "relative_release_path": "space_app/artifacts/figures/stage4_visual_severity_heatmap.png",
+      "size_bytes": 93889,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage5_instruction_length_shift.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage5_instruction_length_shift.png",
+      "relative_release_path": "space_app/artifacts/figures/stage5_instruction_length_shift.png",
+      "size_bytes": 54510,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage5_instruction_perturbation_counts.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage5_instruction_perturbation_counts.png",
+      "relative_release_path": "space_app/artifacts/figures/stage5_instruction_perturbation_counts.png",
+      "size_bytes": 49974,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage6_async_drift_by_mode.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage6_async_drift_by_mode.png",
+      "relative_release_path": "space_app/artifacts/figures/stage6_async_drift_by_mode.png",
+      "size_bytes": 82535,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage6_async_metric_heatmap.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage6_async_metric_heatmap.png",
+      "relative_release_path": "space_app/artifacts/figures/stage6_async_metric_heatmap.png",
+      "size_bytes": 113837,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage6_latency_quality_tradeoff.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage6_latency_quality_tradeoff.png",
+      "relative_release_path": "space_app/artifacts/figures/stage6_latency_quality_tradeoff.png",
+      "size_bytes": 68864,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage6_recovery_delay_proxy.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage6_recovery_delay_proxy.png",
+      "relative_release_path": "space_app/artifacts/figures/stage6_recovery_delay_proxy.png",
+      "size_bytes": 85327,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage6_trace_overlay_first_episode.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage6_trace_overlay_first_episode.png",
+      "relative_release_path": "space_app/artifacts/figures/stage6_trace_overlay_first_episode.png",
+      "size_bytes": 151089,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage7_baseline_mean_drift.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage7_baseline_mean_drift.png",
+      "relative_release_path": "space_app/artifacts/figures/stage7_baseline_mean_drift.png",
+      "size_bytes": 70520,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage7_baseline_metric_heatmap.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage7_baseline_metric_heatmap.png",
+      "relative_release_path": "space_app/artifacts/figures/stage7_baseline_metric_heatmap.png",
+      "size_bytes": 105945,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage7_baseline_quality_score.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage7_baseline_quality_score.png",
+      "relative_release_path": "space_app/artifacts/figures/stage7_baseline_quality_score.png",
+      "size_bytes": 72246,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage7_baseline_trace_overlay.png",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/figures/stage7_baseline_trace_overlay.png",
+      "relative_release_path": "space_app/artifacts/figures/stage7_baseline_trace_overlay.png",
+      "size_bytes": 133867,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/failure_taxonomy.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/failure_taxonomy.md",
+      "relative_release_path": "space_app/artifacts/reports/failure_taxonomy.md",
+      "size_bytes": 1056,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/limitations.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/limitations.md",
+      "relative_release_path": "space_app/artifacts/reports/limitations.md",
+      "size_bytes": 1290,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/reproducibility.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/reproducibility.md",
+      "relative_release_path": "space_app/artifacts/reports/reproducibility.md",
+      "size_bytes": 1009,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/robotrace_public_summary.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/robotrace_public_summary.md",
+      "relative_release_path": "space_app/artifacts/reports/robotrace_public_summary.md",
+      "size_bytes": 774,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/robotrace_report.html",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/robotrace_report.html",
+      "relative_release_path": "space_app/artifacts/reports/robotrace_report.html",
+      "size_bytes": 38845,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/robotrace_report.md",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/reports/robotrace_report.md",
+      "relative_release_path": "space_app/artifacts/reports/robotrace_report.md",
+      "size_bytes": 35710,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/async_dataset_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/async_dataset_summary.json",
+      "relative_release_path": "space_app/artifacts/summaries/async_dataset_summary.json",
+      "size_bytes": 13355,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/async_summary.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/async_summary.csv",
+      "relative_release_path": "space_app/artifacts/summaries/async_summary.csv",
+      "size_bytes": 7697,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/robotrace_evidence_index.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/robotrace_evidence_index.csv",
+      "relative_release_path": "space_app/artifacts/summaries/robotrace_evidence_index.csv",
+      "size_bytes": 7808,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/robotrace_evidence_index.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/robotrace_evidence_index.json",
+      "relative_release_path": "space_app/artifacts/summaries/robotrace_evidence_index.json",
+      "size_bytes": 13594,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/robotrace_final_metrics.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/robotrace_final_metrics.csv",
+      "relative_release_path": "space_app/artifacts/summaries/robotrace_final_metrics.csv",
+      "size_bytes": 3153,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/robotrace_final_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/robotrace_final_summary.json",
+      "relative_release_path": "space_app/artifacts/summaries/robotrace_final_summary.json",
+      "size_bytes": 2892,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/robotrace_missing_evidence_manifest.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/robotrace_missing_evidence_manifest.json",
+      "relative_release_path": "space_app/artifacts/summaries/robotrace_missing_evidence_manifest.json",
+      "size_bytes": 545,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage3_dataset_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage3_dataset_summary.json",
+      "relative_release_path": "space_app/artifacts/summaries/stage3_dataset_summary.json",
+      "size_bytes": 8247,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage4_visual_summary.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage4_visual_summary.csv",
+      "relative_release_path": "space_app/artifacts/summaries/stage4_visual_summary.csv",
+      "size_bytes": 2061,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage4_visual_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage4_visual_summary.json",
+      "relative_release_path": "space_app/artifacts/summaries/stage4_visual_summary.json",
+      "size_bytes": 5845,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage5_instruction_summary.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage5_instruction_summary.csv",
+      "relative_release_path": "space_app/artifacts/summaries/stage5_instruction_summary.csv",
+      "size_bytes": 321,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage5_instruction_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage5_instruction_summary.json",
+      "relative_release_path": "space_app/artifacts/summaries/stage5_instruction_summary.json",
+      "size_bytes": 1178,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage7_baseline_summary.csv",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage7_baseline_summary.csv",
+      "relative_release_path": "space_app/artifacts/summaries/stage7_baseline_summary.csv",
+      "size_bytes": 1715,
+      "exists": true
+    },
+    {
+      "group": "space_app_artifacts",
+      "source_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage7_policy_eval_summary.json",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/space_app/artifacts/summaries/stage7_policy_eval_summary.json",
+      "relative_release_path": "space_app/artifacts/summaries/stage7_policy_eval_summary.json",
+      "size_bytes": 5920,
+      "exists": true
+    },
+    {
+      "group": "root",
+      "source_path": "generated",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/release_notes.md",
+      "relative_release_path": "release_notes.md",
+      "size_bytes": 861,
+      "exists": true
+    },
+    {
+      "group": "root",
+      "source_path": "generated",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/publish_instructions.md",
+      "relative_release_path": "publish_instructions.md",
+      "size_bytes": 1714,
+      "exists": true
+    },
+    {
+      "group": "manifest",
+      "source_path": "generated",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/manifest/release_manifest.json",
+      "relative_release_path": "manifest/release_manifest.json",
+      "size_bytes": 32464,
+      "exists": true
+    },
+    {
+      "group": "manifest",
+      "source_path": "generated",
+      "release_path": "/kaggle/working/RoboTrace/hf_release/manifest/release_manifest.csv",
+      "relative_release_path": "manifest/release_manifest.csv",
+      "size_bytes": 19590,
+      "exists": true
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}
