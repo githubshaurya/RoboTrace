@@ -268,7 +268,7 @@ Missing/optional evidence paths are excluded from the public evidence index and 
 
 - `/kaggle/working/RoboTrace/results/summaries/robotrace_missing_evidence_manifest.json`
 
-## Claims allowed
+## Claims:
 
 - RoboTrace runs fully in Kaggle under the tested environment.
 - The core package, metrics, perturbation logic, async simulator, and report writers pass CPU-safe tests.
@@ -279,7 +279,7 @@ Missing/optional evidence paths are excluded from the public evidence index and 
 - The async simulator identifies action horizon mismatch as the highest-risk deployment-stress mode in this run.
 - The optional policy stage provides action-only sanity baselines and explicitly records that no real policy was loaded.
 
-## Claims not allowed
+## We don't claim:
 
 - Do not claim real robot hardware validation.
 - Do not claim real VLA policy robustness.
@@ -287,12 +287,6 @@ Missing/optional evidence paths are excluded from the public evidence index and 
 - Do not claim task success or success-rate degradation.
 - Do not claim measured serving latency; Stage 6 latency values are proxies.
 - Do not claim SOTA benchmark status.
-
-## Next stages
-
-1. Stage 9: Prepare Hugging Face dataset/Space release folder, with dataset card and dashboard scaffold.
-2. Stage 10: GitHub packaging and push, only after inspecting the generated report and avoiding large raw artifacts.
-3. Optional later stage: isolated real-policy loading, but only in a separate notebook with pinned versions and fallback behavior.
 
 ## Final verdict
 
